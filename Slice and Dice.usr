@@ -1,7 +1,7 @@
 [General]
 Type=Multi
 DefaultCfg=default.cfg
-ParameterFile=
+ParameterFile=Slice and Dice.prm
 GlobalParameterFile=
 NewFunctionHeader=1
 RunType=cci
@@ -24,7 +24,6 @@ Description=
 ScriptLocale=en-US
 [Actions]
 vuser_init=vuser_init.c
-Action=Action.c
 Search=Search.c
 Buy=Buy.c
 vuser_end=vuser_end.c
@@ -38,32 +37,30 @@ Default Profile=default.cfg
 globals.h=
 [Modified Actions]
 vuser_init=0
-Action=1
-Search=0
+Search=1
 Buy=0
 vuser_end=0
 [Recorded Actions]
 vuser_init=0
-Action=0
 Search=0
 Buy=0
 vuser_end=0
 [Replayed Actions]
 vuser_init=1
-Action=1
-Search=0
-Buy=0
+Search=1
+Buy=1
 vuser_end=1
 [Interpreters]
 vuser_init=cci
-Action=cci
 Search=cci
 Buy=cci
 vuser_end=cci
 [TransactionsOrder]
-Order=
+Order="01_pageLaunch"
 [StateManagement]
-LastReplayStatus=1
+LastReplayStatus=2
 [ActiveReplay]
 LastReplayedRunName=
 ActiveRunName=
+[Transactions]
+01_pageLaunch=
